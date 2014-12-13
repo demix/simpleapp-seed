@@ -1,5 +1,5 @@
 
 
 exports.main = function(req, res){
-    res.render('main');
+    res.render('main', {appname:'main'});
 };

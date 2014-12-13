@@ -1,0 +1,17 @@
+
+@import 'def';
+
+html,body{height:100%;}
+body{color:#fff;}
+body>header{height:80px;line-height:80px;background:@header-bg;position:fixed;top:0;left:0;width:100%;z-index:100}
+body>nav{
+    background:@view-bg;color:@main-color;border-bottom:1px solid @main-color;display:-webkit-box;
+    height:30px;line-height:30px;padding-left:10px;
+    position:fixed;top:80px;left:0;width:100%;z-index:100;
+
+    p{margin-right:10px;cursor:pointer;}
+}
+body>views{background:@view-bg;color:@main-color;display:block;top:110px;bottom:30px;position:absolute;width:100%;}
+
+
+body>footer{background:@footer-bg;position:fixed;bottom:0;left:0;width:100%;z-index:100;height:30px;line-height:30px;}
