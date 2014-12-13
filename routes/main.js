@@ -7,6 +7,12 @@ module.exports = function(app){
     app.get('*', require('../controllers/common').main);
     app.all(/^\/proxy\/(.*)/i , require('../controllers/proxy').main);
 
+    app.get(/^\/(page|about)(.*)/, require('../controllers/main').main);
+
+    app.get('/', function(req, res){
+        res.redirect('/page');
+    });
+
 
 
     if(app.get('env') == 'development'){
