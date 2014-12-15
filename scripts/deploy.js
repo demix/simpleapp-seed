@@ -109,6 +109,9 @@ var doBrowserify = function(callback){
 doLess(function(){
     doBrowserify(function(){
         console.log('=============Done==============');
+        var args = process.argv.slice(2);
+        if(args.length && args[0] == 'test')
+            return;
         var cp = require('child_process');
         cp.exec('forever start app.js' , function(error, stdout, stderr){
             console.log(stdout);

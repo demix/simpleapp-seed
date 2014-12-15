@@ -4,6 +4,7 @@
   "description": "A webapp seed package based on express, browserify, less, backbonejs and swig.",
   "main": "app.js",
   "scripts": {
+    "test": "node scripts/deploy.js test",
     "deploy": "node scripts/deploy.js",
     "stop": "forever stop app.js"
   },
